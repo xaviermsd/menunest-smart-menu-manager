@@ -29,32 +29,114 @@
 .menunest-toolbar {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px 16px;
+	gap: 10px 16px;
 	align-items: center;
-	justify-content: space-between;
-	margin: 10px 0 14px;
-	padding: 8px 10px;
+	margin: 12px 0 16px;
+	padding: 10px 12px;
 	background: #f6f7f7;
 	border: 1px solid #dcdcde;
-	max-width: 760px;
+	border-radius: 4px;
+	max-width: 820px;
+	box-sizing: border-box;
 }
-.menunest-search,
-.menunest-actions {
+.menunest-search {
+	position: relative;
 	display: flex;
-	flex-wrap: wrap;
-	gap: 6px;
 	align-items: center;
+	gap: 4px;
+	flex: 1 1 240px;
+	min-width: 220px;
 }
-.menunest-search-input {
-	width: 220px;
+.menunest-search > .dashicons-search {
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #8c8f94;
+	pointer-events: none;
+}
+.menunest-toolbar .menunest-search-input {
+	flex: 1;
+	min-width: 0;
+	height: 30px;
+	min-height: 30px;
+	margin: 0;
+	padding: 0 8px 0 32px;
+	font-size: 13px;
+	line-height: 28px;
+	border-radius: 4px;
 }
 .menunest-search-count {
 	color: #50575e;
 	font-size: 12px;
-	min-width: 48px;
+	white-space: nowrap;
 }
-.menunest-tips {
-	font-size: 12px;
+.menunest-search-count:empty {
+	display: none;
+}
+.menunest-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+.menunest-group {
+	display: inline-flex;
+}
+.menunest-group .menunest-tool + .menunest-tool {
+	margin-left: -1px;
+}
+.menunest-group .menunest-tool:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.menunest-group .menunest-tool:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
+/* Compact buttons that look the same in every admin theme */
+.menunest-tool {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	box-sizing: border-box;
+	height: 30px;
+	margin: 0;
+	padding: 0 10px;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	background: #fff;
+	color: #2c3338;
+	font-size: 13px;
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.menunest-tool .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	color: #50575e;
+}
+.menunest-tool.is-icon {
+	width: 30px;
+	padding: 0;
+	justify-content: center;
+}
+.menunest-tool:hover,
+.menunest-tool:focus {
+	border-color: #2271b1;
+	color: #2271b1;
+	position: relative;
+	z-index: 1;
+}
+.menunest-tool:hover .dashicons,
+.menunest-tool:focus .dashicons {
+	color: #2271b1;
+}
+.menunest-tool:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px #2271b1;
 }
 
 /* Per-item buttons */
@@ -289,6 +371,8 @@
 }
 .menunest-bulk textarea {
 	font-size: 12px;
+	white-space: pre;
+	overflow-x: auto;
 }
 .menunest-bulk-match {
 	display: block;
@@ -369,11 +453,4 @@
 }
 .menunest-toolbar-status {
 	flex-basis: 100%;
-}
-.menunest-backups-link {
-	font-size: 12px;
-}
-.menunest-prev .dashicons,
-.menunest-next .dashicons {
-	margin-top: 4px;
 }

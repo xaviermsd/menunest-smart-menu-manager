@@ -125,7 +125,7 @@ final class MenuNest_Admin {
 		?>
 		<div class="wrap menunest-wrap">
 			<h1 class="menunest-title">
-				<span class="dashicons dashicons-menu-alt3" aria-hidden="true"></span>
+				<img class="menunest-logo" src="<?php echo esc_url( MENUNEST_URL . 'assets/images/menunest-icon.svg' ); ?>" width="32" height="32" alt="">
 				<?php esc_html_e( 'MenuNest: Smart Menu Manager', 'menunest-smart-menu-manager' ); ?>
 			</h1>
 

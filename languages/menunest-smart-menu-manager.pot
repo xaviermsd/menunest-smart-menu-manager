@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-23T14:46:27+00:00\n"
+"POT-Creation-Date: 2026-10-23T15:08:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: menunest-smart-menu-manager\n"
@@ -628,6 +628,7 @@ msgid "Backup downloaded"
 msgstr ""
 
 #: includes/class-menunest-history.php:42
+#: assets/js/editor.js:27
 msgid "Duplicate"
 msgstr ""
 
@@ -782,10 +783,6 @@ msgstr ""
 msgid "Expand all"
 msgstr ""
 
-#: assets/js/editor.js:27
-msgid "Duplicate menu"
-msgstr ""
-
 #: assets/js/editor.js:29
 msgid "All backups"
 msgstr ""
@@ -915,7 +912,7 @@ msgid "Items will be added under:"
 msgstr ""
 
 #: assets/js/editor.js:63
-msgid "One item per line. Add a link after a | sign. Indent a line (or start it with --) to make it a sub-item of the line above. Bullets and numbers are removed. Change the parent with \"Add new items under\" above."
+msgid "One item per line. Add a link after a | sign. Start a line with -- (or indent it) to make it a sub-item of the line above. Bullets and numbers are removed."
 msgstr ""
 
 #: assets/js/editor.js:64

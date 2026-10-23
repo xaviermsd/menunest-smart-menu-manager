@@ -6,11 +6,10 @@
 	gap: 8px;
 }
 
-.menunest-title .dashicons {
-	font-size: 28px;
-	width: 28px;
-	height: 28px;
-	color: #2271b1;
+.menunest-title .menunest-logo {
+	width: 32px;
+	height: 32px;
+	flex: none;
 }
 
 .menunest-tab {

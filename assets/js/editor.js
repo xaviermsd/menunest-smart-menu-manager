@@ -24,7 +24,7 @@
 		noMatches: __( 'No matches', 'menunest-smart-menu-manager' ),
 		collapseAll: __( 'Collapse all', 'menunest-smart-menu-manager' ),
 		expandAll: __( 'Expand all', 'menunest-smart-menu-manager' ),
-		duplicate: __( 'Duplicate menu', 'menunest-smart-menu-manager' ),
+		duplicate: __( 'Duplicate', 'menunest-smart-menu-manager' ),
 		backup: __( 'Back up now', 'menunest-smart-menu-manager' ),
 		backupsLink: __( 'All backups', 'menunest-smart-menu-manager' ),
 		backupSaving: __( 'Saving backup...', 'menunest-smart-menu-manager' ),
@@ -59,8 +59,8 @@
 		bulkTitle: __( 'Bulk add: paste a list', 'menunest-smart-menu-manager' ),
 		bulkMenu: __( 'Menu:', 'menunest-smart-menu-manager' ),
 		bulkUnder: __( 'Items will be added under:', 'menunest-smart-menu-manager' ),
-		bulkPlaceholder: 'Frag Racks\nWall Art | https://example.com/wall-art\n    Small Prints\n    Large Prints\nSpecial Orders',
-		bulkHelp: __( 'One item per line. Add a link after a | sign. Indent a line (or start it with --) to make it a sub-item of the line above. Bullets and numbers are removed. Change the parent with "Add new items under" above.', 'menunest-smart-menu-manager' ),
+		bulkPlaceholder: 'Frag Racks\nWall Art | /wall-art\n-- Small Prints\n-- Large Prints\nSpecial Orders',
+		bulkHelp: __( 'One item per line. Add a link after a | sign. Start a line with -- (or indent it) to make it a sub-item of the line above. Bullets and numbers are removed.', 'menunest-smart-menu-manager' ),
 		bulkMatch: __( 'Link names to existing categories with the same name', 'menunest-smart-menu-manager' ),
 		bulkLinked: __( 'Will link to the existing category with this name', 'menunest-smart-menu-manager' ),
 		bulkLink: __( 'Link', 'menunest-smart-menu-manager' ),
@@ -578,33 +578,40 @@
 	/* Toolbar above "Menu structure" ------------------------------------ */
 
 	function buildToolbar() {
+		var icon = function ( name ) {
+			return '<span class="dashicons dashicons-' + name + '" aria-hidden="true"></span>';
+		};
 		var $bar = $(
 			'<div class="menunest-toolbar">' +
 				'<div class="menunest-search">' +
+					icon( 'search' ) +
 					'<input type="search" class="menunest-search-input">' +
-					'<button type="button" class="button menunest-prev"><span class="dashicons dashicons-arrow-up-alt2" aria-hidden="true"></span></button>' +
-					'<button type="button" class="button menunest-next"><span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span></button>' +
 					'<span class="menunest-search-count" aria-live="polite"></span>' +
+					'<button type="button" class="menunest-tool is-icon menunest-prev">' + icon( 'arrow-up-alt2' ) + '</button>' +
+					'<button type="button" class="menunest-tool is-icon menunest-next">' + icon( 'arrow-down-alt2' ) + '</button>' +
 				'</div>' +
 				'<div class="menunest-actions">' +
-					'<button type="button" class="button menunest-collapse-all"></button>' +
-					'<button type="button" class="button menunest-expand-all"></button>' +
-					'<button type="button" class="button menunest-duplicate"></button>' +
-					'<button type="button" class="button menunest-backup"></button>' +
-					'<a class="button-link menunest-backups-link"></a>' +
-					'<button type="button" class="button-link menunest-tips"></button>' +
+					'<span class="menunest-group">' +
+						'<button type="button" class="menunest-tool menunest-collapse-all">' + icon( 'arrow-up-alt2' ) + '<span class="menunest-label"></span></button>' +
+						'<button type="button" class="menunest-tool menunest-expand-all">' + icon( 'arrow-down-alt2' ) + '<span class="menunest-label"></span></button>' +
+					'</span>' +
+					'<button type="button" class="menunest-tool menunest-backup">' + icon( 'backup' ) + '<span class="menunest-label"></span></button>' +
+					'<button type="button" class="menunest-tool menunest-duplicate">' + icon( 'admin-page' ) + '<span class="menunest-label"></span></button>' +
+					'<a class="menunest-tool menunest-backups-link">' + icon( 'list-view' ) + '<span class="menunest-label"></span></a>' +
+					'<button type="button" class="menunest-tool is-icon menunest-tips">' + icon( 'editor-help' ) + '</button>' +
 				'</div>' +
 				'<p class="menunest-status menunest-toolbar-status" role="status"></p>' +
 			'</div>'
 		);
 
 		$bar.find( '.menunest-search-input' ).attr( 'placeholder', t.search ).attr( 'aria-label', t.search );
-		$bar.find( '.menunest-collapse-all' ).text( t.collapseAll );
-		$bar.find( '.menunest-expand-all' ).text( t.expandAll );
-		$bar.find( '.menunest-duplicate' ).text( t.duplicate );
-		$bar.find( '.menunest-backup' ).text( t.backup );
-		$bar.find( '.menunest-tips' ).text( t.backupReminder );
-		$bar.find( '.menunest-backups-link' ).text( t.backupsLink ).attr( 'href', cfg.backupsUrl );
+		$bar.find( '.menunest-collapse-all .menunest-label' ).text( t.collapseAll );
+		$bar.find( '.menunest-expand-all .menunest-label' ).text( t.expandAll );
+		$bar.find( '.menunest-duplicate .menunest-label' ).text( t.duplicate );
+		$bar.find( '.menunest-backup .menunest-label' ).text( t.backup );
+		$bar.find( '.menunest-backups-link .menunest-label' ).text( t.backupsLink );
+		$bar.find( '.menunest-backups-link' ).attr( 'href', cfg.backupsUrl );
+		$bar.find( '.menunest-tips' ).attr( { 'aria-label': t.backupReminder, title: t.backupReminder } );
 		$bar.find( '.menunest-prev' ).attr( { 'aria-label': t.prev, title: t.prev } );
 		$bar.find( '.menunest-next' ).attr( { 'aria-label': t.next, title: t.next } );
 
@@ -1018,7 +1025,7 @@
 				'<div class="menunest-bulk-body">' +
 					'<label class="menunest-bulk-menu"><span></span> <select></select></label>' +
 					'<p class="menunest-bulk-under"></p>' +
-					'<textarea rows="8" class="widefat code" spellcheck="false"></textarea>' +
+					'<textarea rows="7" class="widefat code" spellcheck="false" wrap="off"></textarea>' +
 					'<p class="description menunest-bulk-help"></p>' +
 					'<label class="menunest-bulk-match"><input type="checkbox" checked> <span></span></label>' +
 					'<div class="menunest-bulk-preview" aria-live="polite"></div>' +
