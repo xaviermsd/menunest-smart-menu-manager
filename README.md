@@ -60,7 +60,7 @@ composer lint             # WordPress Coding Standards + PHP 7.4+ compatibility
 composer analyse          # PHPStan level 8
 composer test             # PHPUnit with the official WordPress test suite
 composer check            # all three
-bin/build-zip.sh          # release zip in build/, without development files
+bash bin/build-zip.sh     # release zip in build/, without development files
 ```
 
 ### Running the tests
