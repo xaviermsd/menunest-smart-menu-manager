@@ -1,0 +1,194 @@
+/* MenuNest: Appearance > MenuNest screen. Uses native wp-admin styles plus a few helpers. */
+
+.menunest-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.menunest-title .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: #2271b1;
+}
+
+.menunest-tab {
+	margin-top: 20px;
+}
+
+.menunest-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 4px 20px 16px;
+	margin: 0 0 20px;
+	max-width: 960px;
+}
+
+.menunest-columns {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 20px;
+	max-width: 1200px;
+}
+
+.menunest-columns .menunest-card {
+	margin: 0;
+}
+
+.menunest-inline-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.menunest-table .num {
+	text-align: right;
+}
+
+.menunest-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.menunest-muted {
+	color: #646970;
+	font-size: 12px;
+}
+
+.menunest-empty {
+	text-align: center;
+	padding: 40px 20px;
+	background: #fff;
+	border: 1px dashed #c3c4c7;
+	border-radius: 4px;
+	color: #50575e;
+	max-width: 960px;
+}
+
+.menunest-empty .dashicons {
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	color: #a7aaad;
+}
+
+.menunest-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 10px;
+	background: #f0f0f1;
+	color: #1d2327;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
+.menunest-badge.is-ok {
+	background: #d1f0da;
+	color: #00450c;
+}
+
+.menunest-badge.is-warn {
+	background: #fcf0d0;
+	color: #5c3c00;
+}
+
+.menunest-summary {
+	max-width: 720px;
+	margin-bottom: 16px;
+}
+
+.menunest-summary th {
+	width: 180px;
+	font-weight: 600;
+}
+
+.menunest-warnings ul {
+	list-style: disc;
+	margin-left: 20px;
+}
+
+.menunest-field {
+	margin: 16px 0 8px;
+}
+
+.menunest-items td {
+	vertical-align: middle;
+}
+
+.menunest-branch {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid #a7aaad;
+	border-bottom: 1px solid #a7aaad;
+	margin-right: 6px;
+	transform: translateY(-3px);
+}
+
+.menunest-target {
+	color: #50575e;
+	margin-left: 4px;
+	word-break: break-all;
+}
+
+.menunest-status-converted td {
+	background: #fffbf0;
+}
+
+.menunest-override select,
+.menunest-pick-search {
+	max-width: 240px;
+}
+
+.menunest-pick {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-top: 6px;
+}
+
+.menunest-pick[hidden] {
+	display: none;
+}
+
+.menunest-import-actions {
+	display: flex;
+	gap: 8px;
+	margin: 20px 0;
+}
+
+.menunest-progress progress {
+	width: 100%;
+	max-width: 480px;
+	height: 16px;
+}
+
+.menunest-progress[hidden] {
+	display: none;
+}
+
+.menunest-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.menunest-toolbar > div {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.menunest-paste summary {
+	cursor: pointer;
+	margin-bottom: 8px;
+	color: #2271b1;
+}

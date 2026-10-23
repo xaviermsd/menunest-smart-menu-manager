@@ -1,0 +1,12 @@
+# PHPStan configuration. Run: composer analyse
+# The WordPress extension (szepeviktor/phpstan-wordpress) is loaded automatically
+# by phpstan/extension-installer.
+parameters:
+	level: 8
+	paths:
+		- menunest-smart-menu-manager.php
+		- uninstall.php
+		- includes
+	bootstrapFiles:
+		- tests/phpstan-bootstrap.php
+	treatPhpDocTypesAsCertain: false

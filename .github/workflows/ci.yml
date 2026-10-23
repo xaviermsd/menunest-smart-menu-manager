@@ -1,0 +1,118 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Coding standards and static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+          tools: composer:v2
+
+      - name: Install tools
+        run: composer update --no-interaction --no-progress
+
+      - name: PHP syntax check (PHP 7.4 and newer rules)
+        run: vendor/bin/phpcs --standard=PHPCompatibilityWP --runtime-set testVersion 7.4- -q --extensions=php --ignore=vendor .
+
+      - name: WordPress Coding Standards
+        run: composer lint
+
+      - name: PHPStan level 8
+        run: composer analyse
+
+  tests:
+    name: PHPUnit (PHP ${{ matrix.php }}, WordPress ${{ matrix.wp }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.1', '8.3', '8.4']
+        wp: ['6.7', 'latest']
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wordpress_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    env:
+      WP_CORE_DIR: /tmp/wordpress
+      WP_DB_NAME: wordpress_test
+      WP_DB_USER: root
+      WP_DB_PASS: root
+      WP_DB_HOST: 127.0.0.1:3306
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mysqli
+          coverage: none
+          tools: composer:v2
+
+      - name: Install tools
+        run: composer update --no-interaction --no-progress
+
+      - name: Use the WordPress test library for this WordPress version
+        run: |
+          if [ "${{ matrix.wp }}" = "latest" ]; then
+            composer require --dev --no-interaction --no-progress -W "wp-phpunit/wp-phpunit:*"
+          else
+            composer require --dev --no-interaction --no-progress -W "wp-phpunit/wp-phpunit:~${{ matrix.wp }}.0"
+          fi
+
+      - name: Download WordPress ${{ matrix.wp }}
+        run: |
+          if [ "${{ matrix.wp }}" = "latest" ]; then
+            URL="https://wordpress.org/latest.tar.gz"
+          else
+            URL="https://wordpress.org/wordpress-${{ matrix.wp }}.tar.gz"
+          fi
+          mkdir -p "$WP_CORE_DIR"
+          curl -sSL "$URL" | tar -xz --strip-components=1 -C "$WP_CORE_DIR"
+
+      - name: Run tests
+        run: composer test
+
+  plugin-check:
+    name: Plugin Check (WordPress.org)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the release folder
+        run: bin/build-zip.sh
+
+      - uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: build/menunest-smart-menu-manager
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: menunest-smart-menu-manager
+          path: build/menunest-smart-menu-manager.zip

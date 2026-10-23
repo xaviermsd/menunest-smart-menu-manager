@@ -1,0 +1,19 @@
+# Files left out of "git archive" and GitHub's source downloads.
+/.github            export-ignore
+/.wordpress-org     export-ignore
+/bin                export-ignore
+/tests              export-ignore
+/.distignore        export-ignore
+/.editorconfig      export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/CONTRIBUTING.md    export-ignore
+/SECURITY.md        export-ignore
+/composer.json      export-ignore
+/phpcs.xml.dist     export-ignore
+/phpstan.neon.dist  export-ignore
+/phpunit.xml.dist   export-ignore
+
+* text=auto eol=lf
+*.png binary
+*.jpg binary

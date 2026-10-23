@@ -1,0 +1,379 @@
+/* MenuNest: Appearance > Menus tools. */
+
+/* Left column: parent picker */
+.menunest-picker {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-left: 4px solid #2271b1;
+	padding: 10px 12px;
+	margin: 0 0 12px;
+}
+.menunest-picker label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+.menunest-picker .description {
+	margin: 6px 0 0;
+}
+.menunest-paused {
+	margin: 0 0 12px !important;
+}
+.menunest-with-children {
+	display: block;
+	padding: 8px 10px 0;
+	font-size: 13px;
+}
+
+/* Toolbar above the menu */
+.menunest-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 16px;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0 14px;
+	padding: 8px 10px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	max-width: 760px;
+}
+.menunest-search,
+.menunest-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+}
+.menunest-search-input {
+	width: 220px;
+}
+.menunest-search-count {
+	color: #50575e;
+	font-size: 12px;
+	min-width: 48px;
+}
+.menunest-tips {
+	font-size: 12px;
+}
+
+/* Per-item buttons */
+.menunest-toggle,
+.menunest-add-child {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: #50575e;
+	line-height: 1;
+	vertical-align: middle;
+}
+.menunest-toggle {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 6px;
+	border-radius: 3px;
+}
+.menunest-toggle .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	transition: transform 0.15s ease;
+}
+.menunest-toggle.is-closed .dashicons {
+	transform: rotate(-90deg);
+}
+.menunest-toggle .menunest-count:not(:empty) {
+	margin-left: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	background: #dcdcde;
+	color: #1d2327;
+	border-radius: 9px;
+	padding: 1px 6px;
+}
+.menunest-add-child {
+	margin-right: 10px;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.menunest-add-child .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+.menunest-toggle:hover,
+.menunest-add-child:hover,
+.menunest-toggle:focus,
+.menunest-add-child:focus {
+	color: #2271b1;
+	background: #f0f6fc;
+	outline: none;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Inline "add sub-item" form */
+.menunest-addchild-form {
+	max-width: 382px;
+	margin: 4px 0 8px 20px;
+	padding: 10px 12px;
+	background: #fff;
+	border: 1px solid #2271b1;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.menunest-addchild-title {
+	margin: 0 0 8px;
+	font-weight: 600;
+}
+.menunest-addchild-form label {
+	display: block;
+	margin-bottom: 8px;
+}
+.menunest-addchild-form label span {
+	display: block;
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+.menunest-ac-error {
+	color: #d63638;
+	margin: 0 0 6px;
+}
+.menunest-ac-error:empty {
+	display: none;
+}
+.menunest-ac-actions {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+.menunest-ac-panel {
+	margin-right: auto !important;
+	font-size: 12px;
+}
+.menunest-ac-actions .spinner {
+	float: none;
+	margin: 0;
+}
+
+/* Collapse */
+#menu-to-edit li.menu-item.menunest-hidden {
+	display: none;
+}
+#menu-to-edit.menunest-searching li.menu-item.menunest-hidden {
+	display: list-item;
+}
+
+/* Search */
+#menu-to-edit li.menunest-dim .menu-item-handle {
+	opacity: 0.4;
+}
+#menu-to-edit li.menunest-match .menu-item-handle {
+	border-color: #dba617;
+	background: #fcf9e8;
+}
+#menu-to-edit li.menunest-current .menu-item-handle {
+	box-shadow: 0 0 0 2px #dba617;
+}
+
+/* Chosen parent from the left picker */
+#menu-to-edit li.menunest-target > .menu-item-bar .menu-item-handle {
+	border-color: #2271b1;
+	box-shadow: inset 4px 0 0 #2271b1;
+}
+
+/* Highlight newly added items */
+.menunest-flash > .menu-item-bar .menu-item-handle,
+.menunest-picker.menunest-flash {
+	animation: menunest-flash 1.6s ease;
+}
+@keyframes menunest-flash {
+	0%, 40% { background: #d7f0dc; }
+	100% { background: inherit; }
+}
+
+/* Backup notice */
+.menunest-modal-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 100100;
+	background: rgba(0, 0, 0, 0.55);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+}
+.menunest-modal {
+	background: #fff;
+	max-width: 560px;
+	width: 100%;
+	max-height: 90vh;
+	overflow: auto;
+	padding: 22px 26px;
+	border-radius: 4px;
+	border-top: 4px solid #dba617;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+.menunest-modal h2 {
+	margin-top: 0;
+}
+.menunest-modal ol {
+	margin-left: 1.4em;
+}
+.menunest-modal ol li {
+	margin-bottom: 6px;
+}
+.menunest-modal-agree {
+	display: flex;
+	gap: 8px;
+	align-items: flex-start;
+	margin: 14px 0;
+	font-weight: 600;
+}
+.menunest-modal-agree input {
+	margin-top: 2px;
+}
+.menunest-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.menunest-toggle .dashicons,
+	.menunest-flash > .menu-item-bar .menu-item-handle,
+	.menunest-picker.menunest-flash {
+		transition: none;
+		animation: none;
+	}
+}
+
+/* Bulk add */
+.menunest-bulk {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	margin: 0 0 12px;
+}
+.menunest-bulk summary {
+	cursor: pointer;
+	padding: 10px 12px;
+	font-weight: 600;
+}
+.menunest-bulk[open] summary {
+	border-bottom: 1px solid #dcdcde;
+}
+.menunest-bulk-body {
+	padding: 10px 12px 12px;
+}
+.menunest-bulk-menu {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 6px;
+}
+.menunest-bulk-menu select {
+	flex: 1;
+	min-width: 0;
+}
+.menunest-bulk-under {
+	margin: 0 0 8px;
+	font-size: 12px;
+	color: #2271b1;
+	font-weight: 600;
+}
+.menunest-bulk textarea {
+	font-size: 12px;
+}
+.menunest-bulk-match {
+	display: block;
+	margin: 6px 0 8px;
+}
+.menunest-bulk-preview {
+	max-height: 260px;
+	overflow: auto;
+	border: 1px solid #f0f0f1;
+}
+.menunest-bulk-preview:empty {
+	display: none;
+}
+.menunest-bulk-row {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 6px;
+	border-bottom: 1px solid #f0f0f1;
+	font-size: 12px;
+}
+.menunest-bulk-row input {
+	margin: 0;
+}
+.menunest-bulk-name {
+	flex: 1;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+.menunest-badge {
+	flex: none;
+	font-size: 10px;
+	padding: 1px 6px;
+	border-radius: 9px;
+	background: #f0f0f1;
+	color: #50575e;
+	max-width: 45%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.menunest-badge.is-term { background: #d7f0dc; color: #00450c; }
+.menunest-badge.is-link { background: #e5f0fa; color: #0a4b78; }
+.menunest-badge.is-warn { background: #fcf9e8; color: #614200; white-space: normal; }
+.menunest-badge.is-bad  { background: #fcf0f1; color: #8a2424; }
+.menunest-bulk-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 6px;
+	margin-top: 8px;
+}
+.menunest-bulk-actions .spinner {
+	float: none;
+	margin: 0;
+}
+.menunest-bulk-done {
+	margin: 6px 0 0;
+	color: #00450c;
+}
+.menunest-bulk-done:empty {
+	display: none;
+}
+
+/* Backup status messages */
+.menunest-status {
+	font-size: 12px;
+	margin: 0;
+}
+.menunest-status:empty {
+	display: none;
+}
+.menunest-status.is-success {
+	color: #00450c;
+}
+.menunest-status.is-error {
+	color: #8a2424;
+}
+.menunest-toolbar-status {
+	flex-basis: 100%;
+}
+.menunest-backups-link {
+	font-size: 12px;
+}
+.menunest-prev .dashicons,
+.menunest-next .dashicons {
+	margin-top: 4px;
+}

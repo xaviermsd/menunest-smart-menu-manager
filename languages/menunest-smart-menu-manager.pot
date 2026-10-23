@@ -1,0 +1,963 @@
+# Copyright (C) 2026 Harsh Prajapati
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MenuNest: Smart Menu Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/menunest-smart-menu-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-23T14:46:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: menunest-smart-menu-manager\n"
+
+#. Plugin Name of the plugin
+#: menunest-smart-menu-manager.php
+#: includes/class-menunest-admin.php:42
+#: includes/class-menunest-admin.php:129
+msgid "MenuNest: Smart Menu Manager"
+msgstr ""
+
+#. Description of the plugin
+#: menunest-smart-menu-manager.php
+msgid "Add menu items under any parent, paste whole lists, collapse and search big menus, and back up, restore, import and export menus with a preview."
+msgstr ""
+
+#. Author of the plugin
+#: menunest-smart-menu-manager.php
+msgid "Harsh Prajapati"
+msgstr ""
+
+#. Author URI of the plugin
+#: menunest-smart-menu-manager.php
+msgid "https://profiles.wordpress.org/xaviermsd/"
+msgstr ""
+
+#: includes/class-menunest-admin.php:43
+msgid "MenuNest"
+msgstr ""
+
+#: includes/class-menunest-admin.php:61
+msgid "Backups and tools"
+msgstr ""
+
+#: includes/class-menunest-admin.php:106
+msgid "Backups"
+msgstr ""
+
+#: includes/class-menunest-admin.php:107
+msgid "Import and Export"
+msgstr ""
+
+#: includes/class-menunest-admin.php:108
+#: includes/class-menunest-admin.php:642
+msgid "History"
+msgstr ""
+
+#: includes/class-menunest-admin.php:109
+msgid "Settings"
+msgstr ""
+
+#: includes/class-menunest-admin.php:118
+#: includes/class-menunest-backups.php:245
+#: includes/class-menunest-backups.php:260
+#: includes/class-menunest-backups.php:272
+#: includes/class-menunest-backups.php:301
+#: includes/class-menunest-backups.php:325
+#: includes/class-menunest-editor.php:139
+#: includes/class-menunest-exporter.php:29
+#: includes/class-menunest-history.php:160
+#: includes/class-menunest-history.php:220
+#: includes/class-menunest-importer.php:42
+#: includes/class-menunest-importer.php:345
+#: includes/class-menunest-importer.php:407
+#: includes/class-menunest-importer.php:489
+msgid "You are not allowed to manage menus."
+msgstr ""
+
+#: includes/class-menunest-admin.php:132
+msgid "MenuNest sections"
+msgstr ""
+
+#: includes/class-menunest-admin.php:172
+msgid "Backup saved."
+msgstr ""
+
+#: includes/class-menunest-admin.php:173
+msgid "Backup deleted."
+msgstr ""
+
+#: includes/class-menunest-admin.php:174
+#: includes/class-menunest-history.php:238
+msgid "History cleared."
+msgstr ""
+
+#: includes/class-menunest-admin.php:175
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: includes/class-menunest-admin.php:182
+msgid "The file could not be imported."
+msgstr ""
+
+#: includes/class-menunest-admin.php:232
+msgid "Back up a menu now"
+msgstr ""
+
+#. translators: %d: number of backups kept per menu.
+#: includes/class-menunest-admin.php:237
+#, php-format
+msgid "MenuNest also backs up a menu automatically every time you save it, and keeps the newest %d backups of each menu. Restoring always saves a backup of the current version first, so a restore can be undone too."
+msgstr ""
+
+#: includes/class-menunest-admin.php:246
+#: includes/class-menunest-admin.php:268
+#: includes/class-menunest-admin.php:371
+#: includes/class-menunest-admin.php:582
+msgid "Menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:248
+#: assets/js/editor.js:28
+msgid "Back up now"
+msgstr ""
+
+#: includes/class-menunest-admin.php:251
+#: includes/class-menunest-admin.php:380
+msgid "You have no menus yet."
+msgstr ""
+
+#: includes/class-menunest-admin.php:255
+msgid "Saved backups"
+msgstr ""
+
+#: includes/class-menunest-admin.php:259
+msgid "No backups yet. They appear here as soon as you save a menu or click Back up now."
+msgstr ""
+
+#: includes/class-menunest-admin.php:269
+msgid "Saved"
+msgstr ""
+
+#: includes/class-menunest-admin.php:270
+msgid "Type"
+msgstr ""
+
+#: includes/class-menunest-admin.php:271
+msgid "Items"
+msgstr ""
+
+#: includes/class-menunest-admin.php:272
+msgid "By"
+msgstr ""
+
+#: includes/class-menunest-admin.php:273
+msgid "Actions"
+msgstr ""
+
+#: includes/class-menunest-admin.php:287
+msgid "This menu no longer exists."
+msgstr ""
+
+#. translators: 1: menu name, 2: date.
+#: includes/class-menunest-admin.php:309
+#, php-format
+msgid "Restore \"%1$s\" to how it was on %2$s? The current version is backed up first, so you can undo this."
+msgstr ""
+
+#. translators: 1: menu name, 2: date.
+#: includes/class-menunest-admin.php:310
+#: includes/class-menunest-history.php:39
+msgid "Restore"
+msgstr ""
+
+#: includes/class-menunest-admin.php:325
+msgid "Restore as new menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:326
+#: includes/class-menunest-admin.php:556
+msgid "Download JSON"
+msgstr ""
+
+#: includes/class-menunest-admin.php:328
+msgid "Delete this backup permanently?"
+msgstr ""
+
+#: includes/class-menunest-admin.php:329
+msgid "Delete"
+msgstr ""
+
+#: includes/class-menunest-admin.php:354
+#: includes/class-menunest-importer.php:351
+msgid "This preview has expired. Please upload the file again."
+msgstr ""
+
+#: includes/class-menunest-admin.php:364
+msgid "Export a menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:365
+msgid "Download one menu as a JSON file. Use it to move the menu to another site, or keep it as an offline backup."
+msgstr ""
+
+#: includes/class-menunest-admin.php:375
+msgid "Include extra item settings from your theme and plugins (icons, mega menu options)"
+msgstr ""
+
+#: includes/class-menunest-admin.php:377
+msgid "Download export file"
+msgstr ""
+
+#: includes/class-menunest-admin.php:385
+msgid "Import a menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:386
+msgid "Choose a file exported with MenuNest. You will see a full preview before anything is created, and the menu is always imported as a new menu, so your existing menus are never changed."
+msgstr ""
+
+#: includes/class-menunest-admin.php:391
+msgid "Export file (.json)"
+msgstr ""
+
+#: includes/class-menunest-admin.php:395
+msgid "Or paste the file contents"
+msgstr ""
+
+#: includes/class-menunest-admin.php:396
+msgid "File contents"
+msgstr ""
+
+#: includes/class-menunest-admin.php:399
+msgid "Preview import"
+msgstr ""
+
+#: includes/class-menunest-admin.php:417
+#: includes/class-menunest-admin.php:439
+msgid "Matched"
+msgstr ""
+
+#: includes/class-menunest-admin.php:418
+msgid "Becomes a custom link"
+msgstr ""
+
+#: includes/class-menunest-admin.php:419
+#: includes/class-menunest-admin.php:502
+msgid "Custom link"
+msgstr ""
+
+#: includes/class-menunest-admin.php:420
+msgid "Custom link, address updated"
+msgstr ""
+
+#: includes/class-menunest-admin.php:430
+msgid "Import preview"
+msgstr ""
+
+#: includes/class-menunest-admin.php:431
+msgid "Nothing has been created yet. Check the details, change any item you want, then click Import as new menu."
+msgstr ""
+
+#: includes/class-menunest-admin.php:435
+msgid "Menu name"
+msgstr ""
+
+#: includes/class-menunest-admin.php:436
+msgid "Menu items"
+msgstr ""
+
+#: includes/class-menunest-admin.php:437
+msgid "Source site"
+msgstr ""
+
+#: includes/class-menunest-admin.php:437
+msgid "This site"
+msgstr ""
+
+#: includes/class-menunest-admin.php:438
+msgid "Exported"
+msgstr ""
+
+#: includes/class-menunest-admin.php:438
+msgid "Unknown"
+msgstr ""
+
+#: includes/class-menunest-admin.php:440
+msgid "Not matched"
+msgstr ""
+
+#. translators: %d: number of items.
+#: includes/class-menunest-admin.php:449
+#, php-format
+msgid "%d item could not be matched to content on this site and will become a custom link. You can choose what it links to below."
+msgid_plural "%d items could not be matched to content on this site and will become custom links. You can choose what they link to below."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: theme location name.
+#: includes/class-menunest-admin.php:456
+#, php-format
+msgid "The menu was shown in \"%s\". That location exists in your theme, but imported menus are not assigned automatically. Assign it under Appearance > Menus > Manage Locations when you are ready."
+msgstr ""
+
+#. translators: %s: theme location slug.
+#: includes/class-menunest-admin.php:458
+#, php-format
+msgid "The menu was shown in a theme location called \"%s\", which your current theme does not have."
+msgstr ""
+
+#: includes/class-menunest-admin.php:463
+msgid "Please check"
+msgstr ""
+
+#: includes/class-menunest-admin.php:474
+msgid "Name for the new menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:478
+msgid "Import extra item settings from the theme and plugins (icons, mega menu options)"
+msgstr ""
+
+#: includes/class-menunest-admin.php:484
+msgid "Item"
+msgstr ""
+
+#: includes/class-menunest-admin.php:485
+msgid "Was"
+msgstr ""
+
+#: includes/class-menunest-admin.php:486
+msgid "Result on this site"
+msgstr ""
+
+#: includes/class-menunest-admin.php:487
+msgid "Change"
+msgstr ""
+
+#: includes/class-menunest-admin.php:511
+msgid "What this item should link to"
+msgstr ""
+
+#: includes/class-menunest-admin.php:513
+msgid "Keep as shown"
+msgstr ""
+
+#: includes/class-menunest-admin.php:515
+msgid "Use a custom link"
+msgstr ""
+
+#: includes/class-menunest-admin.php:517
+msgid "Link to content on this site..."
+msgstr ""
+
+#: includes/class-menunest-admin.php:520
+msgid "Search pages, posts, categories"
+msgstr ""
+
+#: includes/class-menunest-admin.php:521
+msgid "Choose content"
+msgstr ""
+
+#: includes/class-menunest-admin.php:530
+msgid "Import as new menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:531
+#: assets/js/editor.js:39
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-menunest-admin.php:554
+msgid "Every import, export, backup, restore and duplicate is recorded here with who did it and when."
+msgstr ""
+
+#: includes/class-menunest-admin.php:557
+msgid "Download text"
+msgstr ""
+
+#: includes/class-menunest-admin.php:560
+msgid "Clear the whole history? This cannot be undone. Download a copy first if you need it."
+msgstr ""
+
+#: includes/class-menunest-admin.php:561
+msgid "Clear history"
+msgstr ""
+
+#: includes/class-menunest-admin.php:570
+msgid "Nothing recorded yet."
+msgstr ""
+
+#: includes/class-menunest-admin.php:579
+msgid "When"
+msgstr ""
+
+#: includes/class-menunest-admin.php:580
+msgid "Who"
+msgstr ""
+
+#: includes/class-menunest-admin.php:581
+msgid "Action"
+msgstr ""
+
+#: includes/class-menunest-admin.php:583
+msgid "What happened"
+msgstr ""
+
+#: includes/class-menunest-admin.php:623
+msgid "Backup settings"
+msgstr ""
+
+#: includes/class-menunest-admin.php:626
+msgid "Automatic backups"
+msgstr ""
+
+#: includes/class-menunest-admin.php:628
+msgid "Back up a menu every time it is saved"
+msgstr ""
+
+#: includes/class-menunest-admin.php:629
+msgid "Recommended. A backup is skipped when nothing changed since the last one."
+msgstr ""
+
+#: includes/class-menunest-admin.php:633
+msgid "Backups to keep"
+msgstr ""
+
+#: includes/class-menunest-admin.php:636
+msgid "per menu"
+msgstr ""
+
+#: includes/class-menunest-admin.php:637
+msgid "When there are more, the oldest backups of that menu are deleted."
+msgstr ""
+
+#: includes/class-menunest-admin.php:645
+msgid "Entries to keep"
+msgstr ""
+
+#: includes/class-menunest-admin.php:650
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: includes/class-menunest-admin.php:653
+msgid "Remove data"
+msgstr ""
+
+#: includes/class-menunest-admin.php:655
+msgid "Delete all backups, history and settings when MenuNest is deleted"
+msgstr ""
+
+#: includes/class-menunest-admin.php:656
+msgid "Your menus themselves are never touched. Leave this off if you might reinstall MenuNest later."
+msgstr ""
+
+#: includes/class-menunest-backups.php:41
+msgid "Manual"
+msgstr ""
+
+#: includes/class-menunest-backups.php:42
+msgid "Automatic, before saving"
+msgstr ""
+
+#: includes/class-menunest-backups.php:43
+msgid "Automatic, before restoring"
+msgstr ""
+
+#. translators: %d: number of menu items.
+#: includes/class-menunest-backups.php:124
+#, php-format
+msgid "Backup saved (%d item)."
+msgid_plural "Backup saved (%d items)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-menunest-backups.php:195
+msgid "Backup not found."
+msgstr ""
+
+#. translators: 1: menu name, 2: backup date.
+#: includes/class-menunest-backups.php:210
+#, php-format
+msgid "%1$s (restored %2$s)"
+msgstr ""
+
+#. translators: 1: number of items, 2: backup date.
+#: includes/class-menunest-backups.php:224
+#, php-format
+msgid "Restored %1$d items from the backup of %2$s."
+msgstr ""
+
+#. translators: %s: backup date.
+#: includes/class-menunest-backups.php:314
+#, php-format
+msgid "Backup of %s downloaded as JSON."
+msgstr ""
+
+#. translators: %s: backup date.
+#: includes/class-menunest-backups.php:336
+#, php-format
+msgid "Backup of %s deleted."
+msgstr ""
+
+#. translators: 1: content type, for example "page". 2: item slug.
+#: includes/class-menunest-builder.php:78
+#, php-format
+msgid "No %1$s with the address \"%2$s\" exists on this site."
+msgstr ""
+
+#. translators: %s: post type name.
+#: includes/class-menunest-builder.php:80
+#, php-format
+msgid "The content type \"%s\" does not exist on this site."
+msgstr ""
+
+#. translators: 1: taxonomy name, for example "category". 2: term slug.
+#: includes/class-menunest-builder.php:100
+#, php-format
+msgid "No %1$s with the slug \"%2$s\" exists on this site."
+msgstr ""
+
+#. translators: %s: taxonomy name.
+#: includes/class-menunest-builder.php:102
+#, php-format
+msgid "The taxonomy \"%s\" does not exist on this site."
+msgstr ""
+
+#. translators: %s: post type label, for example "Products".
+#: includes/class-menunest-builder.php:116
+#, php-format
+msgid "%s archive"
+msgstr ""
+
+#. translators: %s: post type name.
+#: includes/class-menunest-builder.php:120
+#, php-format
+msgid "The \"%s\" archive does not exist on this site."
+msgstr ""
+
+#. translators: %s: menu name.
+#: includes/class-menunest-editor.php:150
+#, php-format
+msgid "%s (copy)"
+msgstr ""
+
+#. translators: 1: original menu name, 2: number of items.
+#: includes/class-menunest-editor.php:169
+#, php-format
+msgid "Copied from \"%1$s\" (%2$d items)."
+msgstr ""
+
+#: includes/class-menunest-editor.php:199
+msgid "Menu duplicated. You are now editing the copy. It is not assigned to any location yet."
+msgstr ""
+
+#: includes/class-menunest-editor.php:200
+msgid "Backup restored. A backup of the previous version was saved first, so you can undo this from Appearance > MenuNest."
+msgstr ""
+
+#: includes/class-menunest-editor.php:224
+msgid "Add new items under: pick a parent once, and every \"Add to Menu\" button puts new items under it."
+msgstr ""
+
+#: includes/class-menunest-editor.php:225
+msgid "Plus button on an item: type a link text and URL to add a sub-item right there. Press Enter to add several in a row."
+msgstr ""
+
+#: includes/class-menunest-editor.php:226
+msgid "Bulk add: paste a list, one item per line. Add a link after a | sign and indent lines to make sub-items."
+msgstr ""
+
+#: includes/class-menunest-editor.php:227
+msgid "Include subcategories: adds a category with all its subcategories, already nested."
+msgstr ""
+
+#: includes/class-menunest-editor.php:228
+msgid "Arrow on an item: fold or unfold its sub-items. Collapse all and Expand all are above the menu."
+msgstr ""
+
+#: includes/class-menunest-editor.php:229
+msgid "Search this menu: highlights matching items. Press Enter to jump to the next one."
+msgstr ""
+
+#: includes/class-menunest-editor.php:230
+msgid "Back up now and Duplicate menu: one-click safety copies. Backups are also made automatically every time you save."
+msgstr ""
+
+#: includes/class-menunest-editor.php:233
+msgid "MenuNest adds these tools to this screen. Nothing changes on your site until you click Save Menu."
+msgstr ""
+
+#: includes/class-menunest-editor.php:235
+msgid "Open backups, import, export and history"
+msgstr ""
+
+#: includes/class-menunest-editor.php:240
+msgid "MenuNest tools"
+msgstr ""
+
+#. translators: %d: number of menu items.
+#: includes/class-menunest-exporter.php:46
+#, php-format
+msgid "Exported %d item as JSON."
+msgid_plural "Exported %d items as JSON."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-menunest-history.php:36
+msgid "Export"
+msgstr ""
+
+#: includes/class-menunest-history.php:37
+msgid "Import"
+msgstr ""
+
+#: includes/class-menunest-history.php:38
+msgid "Backup"
+msgstr ""
+
+#: includes/class-menunest-history.php:40
+msgid "Backup deleted"
+msgstr ""
+
+#: includes/class-menunest-history.php:41
+msgid "Backup downloaded"
+msgstr ""
+
+#: includes/class-menunest-history.php:42
+msgid "Duplicate"
+msgstr ""
+
+#: includes/class-menunest-history.php:43
+msgid "History cleared"
+msgstr ""
+
+#: includes/class-menunest-history.php:146
+msgid "Unknown user"
+msgstr ""
+
+#: includes/class-menunest-importer.php:50
+msgid "The file could not be uploaded. Please try again."
+msgstr ""
+
+#: includes/class-menunest-importer.php:53
+#: includes/class-menunest-importer.php:64
+msgid "The file is too large. The limit is 5 MB."
+msgstr ""
+
+#: includes/class-menunest-importer.php:61
+msgid "Choose a MenuNest export file, or paste its contents."
+msgstr ""
+
+#: includes/class-menunest-importer.php:108
+msgid "This is not a valid JSON file."
+msgstr ""
+
+#: includes/class-menunest-importer.php:111
+msgid "This file was not made by MenuNest. Export the menu with MenuNest first."
+msgstr ""
+
+#: includes/class-menunest-importer.php:114
+msgid "This file was made by a newer version of MenuNest. Please update the plugin first."
+msgstr ""
+
+#. translators: %d: maximum number of items.
+#: includes/class-menunest-importer.php:118
+#, php-format
+msgid "This menu has too many items. The limit is %d."
+msgstr ""
+
+#: includes/class-menunest-importer.php:145
+msgid "Imported menu"
+msgstr ""
+
+#. translators: %s: post type name.
+#: includes/class-menunest-importer.php:305
+#, php-format
+msgid "Content type \"%s\" is not available on this site."
+msgstr ""
+
+#. translators: %s: taxonomy name.
+#: includes/class-menunest-importer.php:308
+#, php-format
+msgid "Taxonomy \"%s\" is not available on this site."
+msgstr ""
+
+#: includes/class-menunest-importer.php:415
+msgid "This import has expired. Please start again."
+msgstr ""
+
+#. translators: %s: menu item title.
+#: includes/class-menunest-importer.php:437
+#, php-format
+msgid "Could not create \"%s\"."
+msgstr ""
+
+#. translators: 1: number of items created, 2: source site address.
+#: includes/class-menunest-importer.php:453
+#, php-format
+msgid "Imported %1$d items from %2$s as a new menu."
+msgstr ""
+
+#: includes/class-menunest-plugin.php:69
+msgid "Menu backups"
+msgstr ""
+
+#: includes/class-menunest-plugin.php:70
+msgid "Menu backup"
+msgstr ""
+
+#: includes/class-menunest-plugin.php:82
+msgid "Menu history"
+msgstr ""
+
+#: includes/class-menunest-plugin.php:83
+msgid "Menu history entry"
+msgstr ""
+
+#: includes/class-menunest-serializer.php:71
+msgid "Menu not found."
+msgstr ""
+
+#: assets/js/admin.js:50
+msgid "Nothing found"
+msgstr ""
+
+#: assets/js/admin.js:86
+msgid "The import stopped because of an error. Please try again."
+msgstr ""
+
+#: assets/js/admin.js:87
+msgid "The import stopped because of an error."
+msgstr ""
+
+#. translators: 1: items done, 2: total items.
+#: assets/js/admin.js:101
+#, js-format
+msgid "Creating items: %1$d of %2$d"
+msgstr ""
+
+#. translators: 1: number of items created, 2: number of items turned into custom links.
+#: assets/js/admin.js:110
+#, js-format
+msgid "Import finished: %1$d items created, %2$d turned into custom links."
+msgstr ""
+
+#: assets/js/admin.js:111
+msgid "Open the new menu"
+msgstr ""
+
+#: assets/js/admin.js:128
+msgid "Creating the menu..."
+msgstr ""
+
+#: assets/js/editor.js:20
+msgid "Add new items under"
+msgstr ""
+
+#: assets/js/editor.js:21
+msgid "Top level (no parent)"
+msgstr ""
+
+#: assets/js/editor.js:22
+msgid "Applies to every \"Add to Menu\" button below."
+msgstr ""
+
+#: assets/js/editor.js:23
+msgid "Search this menu"
+msgstr ""
+
+#: assets/js/editor.js:24
+msgid "No matches"
+msgstr ""
+
+#: assets/js/editor.js:25
+msgid "Collapse all"
+msgstr ""
+
+#: assets/js/editor.js:26
+msgid "Expand all"
+msgstr ""
+
+#: assets/js/editor.js:27
+msgid "Duplicate menu"
+msgstr ""
+
+#: assets/js/editor.js:29
+msgid "All backups"
+msgstr ""
+
+#: assets/js/editor.js:30
+msgid "Saving backup..."
+msgstr ""
+
+#: assets/js/editor.js:31
+msgid "Backup saved. You can restore it any time from Appearance > MenuNest."
+msgstr ""
+
+#: assets/js/editor.js:32
+msgid "The backup could not be saved. Please reload the page and try again."
+msgstr ""
+
+#: assets/js/editor.js:33
+msgid "Note: backups contain the last SAVED version of this menu, not your unsaved changes."
+msgstr ""
+
+#: assets/js/editor.js:34
+msgid "Add a sub-item here"
+msgstr ""
+
+#: assets/js/editor.js:35
+msgid "Show or hide sub-items"
+msgstr ""
+
+#: assets/js/editor.js:36
+msgid "Link Text"
+msgstr ""
+
+#: assets/js/editor.js:37
+msgid "URL"
+msgstr ""
+
+#: assets/js/editor.js:38
+msgid "Add"
+msgstr ""
+
+#: assets/js/editor.js:40
+msgid "Or add pages and categories from the left panel"
+msgstr ""
+
+#: assets/js/editor.js:41
+msgid "Please enter the link text."
+msgstr ""
+
+#: assets/js/editor.js:42
+msgid "Please enter a valid URL, or # for a heading with no link."
+msgstr ""
+
+#: assets/js/editor.js:43
+msgid "Include subcategories (nested)"
+msgstr ""
+
+#: assets/js/editor.js:44
+msgid "Some items could not be added. Please reload the page and try again."
+msgstr ""
+
+#: assets/js/editor.js:45
+msgid "You have unsaved changes. The copy will be made from the last SAVED version of this menu, and leaving this page will discard your unsaved changes. Continue?"
+msgstr ""
+
+#: assets/js/editor.js:46
+msgid "MenuNest is paused for this visit."
+msgstr ""
+
+#: assets/js/editor.js:47
+msgid "Turn on"
+msgstr ""
+
+#: assets/js/editor.js:48
+msgid "Backup tips"
+msgstr ""
+
+#: assets/js/editor.js:49
+msgid "Before you start: take a backup"
+msgstr ""
+
+#: assets/js/editor.js:50
+msgid "MenuNest moves and adds menu items for you. Nothing is saved until you click Save Menu, but one wrong save on a big menu can be painful to undo."
+msgstr ""
+
+#: assets/js/editor.js:51
+msgid "Back up this menu now (one click, below). MenuNest also backs up a menu automatically every time you save it, and you can restore any backup from Appearance > MenuNest."
+msgstr ""
+
+#: assets/js/editor.js:52
+msgid "Make sure you have a recent full-site backup from your host or a backup plugin."
+msgstr ""
+
+#: assets/js/editor.js:53
+msgid "Check your menu on the site after saving."
+msgstr ""
+
+#: assets/js/editor.js:54
+msgid "Back up this menu now"
+msgstr ""
+
+#: assets/js/editor.js:55
+msgid "I understand, and I have a backup (or will make one before saving)."
+msgstr ""
+
+#: assets/js/editor.js:56
+msgid "Continue"
+msgstr ""
+
+#: assets/js/editor.js:57
+msgid "Not now"
+msgstr ""
+
+#: assets/js/editor.js:58
+msgid "Close"
+msgstr ""
+
+#: assets/js/editor.js:59
+msgid "Bulk add: paste a list"
+msgstr ""
+
+#: assets/js/editor.js:60
+msgid "Menu:"
+msgstr ""
+
+#: assets/js/editor.js:61
+msgid "Items will be added under:"
+msgstr ""
+
+#: assets/js/editor.js:63
+msgid "One item per line. Add a link after a | sign. Indent a line (or start it with --) to make it a sub-item of the line above. Bullets and numbers are removed. Change the parent with \"Add new items under\" above."
+msgstr ""
+
+#: assets/js/editor.js:64
+msgid "Link names to existing categories with the same name"
+msgstr ""
+
+#: assets/js/editor.js:65
+msgid "Will link to the existing category with this name"
+msgstr ""
+
+#: assets/js/editor.js:66
+msgid "Link"
+msgstr ""
+
+#: assets/js/editor.js:67
+msgid "No link (#)"
+msgstr ""
+
+#: assets/js/editor.js:68
+msgid "Several categories have this name, added as # (no link)"
+msgstr ""
+
+#: assets/js/editor.js:69
+msgid "Invalid link, skipped"
+msgstr ""
+
+#. translators: %d: number of items.
+#: assets/js/editor.js:71
+#, js-format
+msgid "Add %d items"
+msgstr ""
+
+#. translators: %d: number of items.
+#: assets/js/editor.js:73
+#, js-format
+msgid "%d items added. Click Save Menu to keep them."
+msgstr ""
+
+#: assets/js/editor.js:74
+msgid "Previous match"
+msgstr ""
+
+#: assets/js/editor.js:75
+msgid "Next match"
+msgstr ""
