@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" role="img" aria-label="MenuNest">
+	<style>
+		.p { animation: pop 4s ease-out infinite; transform-origin: 3px 7px; }
+		.l { stroke-dasharray: 22; stroke-dashoffset: 22; animation: draw 4s ease-out infinite; }
+		.c1 { animation: in1 4s ease-out infinite; }
+		.c2 { animation: in2 4s ease-out infinite; }
+		@keyframes pop { 0% { transform: scaleX(0); opacity: 0; } 12%, 88% { transform: scaleX(1); opacity: 1; } 100% { opacity: 0; } }
+		@keyframes draw { 0%, 12% { stroke-dashoffset: 22; } 32%, 88% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+		@keyframes in1 { 0%, 28% { transform: translateX(-6px); opacity: 0; } 40%, 88% { transform: none; opacity: 1; } 100% { opacity: 0; } }
+		@keyframes in2 { 0%, 36% { transform: translateX(-6px); opacity: 0; } 48%, 88% { transform: none; opacity: 1; } 100% { opacity: 0; } }
+		@media (prefers-reduced-motion: reduce) { .p, .l, .c1, .c2 { animation: none; stroke-dashoffset: 0; } }
+	</style>
+	<title>MenuNest</title>
+	<rect class="p" x="3" y="4" width="20" height="6" rx="2" fill="#2271b1"/>
+	<path class="l" d="M8 10v6.5h5M8 16.5V24h5" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	<rect class="c1" x="14" y="13.5" width="15" height="6" rx="2" fill="#72aee6"/>
+	<rect class="c2" x="14" y="21" width="15" height="6" rx="2" fill="#72aee6"/>
+</svg>
