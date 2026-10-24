@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".wordpress-org/banner-1544x500.png" alt="MenuNest: Smart Menu Manager. Build menus faster. Never lose one again." width="100%">
+  <img src=".wordpress-org/banner-1544x500.jpg" alt="MenuNest: Smart Menu Manager. Build menus faster. Never lose one again." width="100%">
 </p>
 
 <h1 align="center">
@@ -56,16 +56,16 @@ MenuNest adds tools to **Appearance > Menus** and a new **Appearance > MenuNest*
 
 <table>
   <tr>
-    <td width="50%"><img src=".wordpress-org/screenshot-1.png" alt="Add new items under any parent, and bulk add from a pasted list"><br><b>1. Add items exactly where they belong.</b> Pick a parent once, or paste a whole list.</td>
-    <td width="50%"><img src=".wordpress-org/screenshot-2.png" alt="The plus button adds a sub-item right where you want it"><br><b>2. Add a sub-item right where you need it.</b> Click + on any item, type, press Enter.</td>
+    <td width="50%"><img src=".wordpress-org/screenshot-1.jpg" alt="Add new items under any parent, and bulk add from a pasted list"><br><b>1. Add items exactly where they belong.</b> Pick a parent once, or paste a whole list.</td>
+    <td width="50%"><img src=".wordpress-org/screenshot-2.jpg" alt="The plus button adds a sub-item right where you want it"><br><b>2. Add a sub-item right where you need it.</b> Click + on any item, type, press Enter.</td>
   </tr>
   <tr>
-    <td><img src=".wordpress-org/screenshot-3.png" alt="Collapse, expand and search big menus"><br><b>3. Find your way around big menus.</b> Search, jump between matches, collapse branches.</td>
-    <td><img src=".wordpress-org/screenshot-4.png" alt="Backups with one-click restore"><br><b>4. Every save is backed up automatically.</b> Restore in one click, or download as JSON.</td>
+    <td><img src=".wordpress-org/screenshot-3.jpg" alt="Collapse, expand and search big menus"><br><b>3. Find your way around big menus.</b> Search, jump between matches, collapse branches.</td>
+    <td><img src=".wordpress-org/screenshot-4.jpg" alt="Backups with one-click restore"><br><b>4. Every save is backed up automatically.</b> Restore in one click, or download as JSON.</td>
   </tr>
   <tr>
-    <td><img src=".wordpress-org/screenshot-5.png" alt="Import preview with matching, warnings and manual mapping"><br><b>5. Move menus between sites, safely.</b> See every item before anything is created.</td>
-    <td><img src=".wordpress-org/screenshot-6.png" alt="History log of every import, export, backup and restore"><br><b>6. Know exactly what happened.</b> Every change, with who and when.</td>
+    <td><img src=".wordpress-org/screenshot-5.jpg" alt="Import preview with matching, warnings and manual mapping"><br><b>5. Move menus between sites, safely.</b> See every item before anything is created.</td>
+    <td><img src=".wordpress-org/screenshot-6.jpg" alt="History log of every import, export, backup and restore"><br><b>6. Know exactly what happened.</b> Every change, with who and when.</td>
   </tr>
 </table>
 
