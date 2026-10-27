@@ -283,11 +283,12 @@ class MenuNest_Ajax_Test extends WP_Ajax_UnitTestCase {
 	 */
 	public function data_protected_actions(): array {
 		return array(
-			'import start'  => array( 'menunest_import_start', 'menunest_import' ),
-			'import step'   => array( 'menunest_import_step', 'menunest_import' ),
-			'search'        => array( 'menunest_import_search', 'menunest_import' ),
-			'back up now'   => array( 'menunest_backup_create', 'menunest_editor' ),
-			'notice accept' => array( 'menunest_save_consent', 'menunest_editor' ),
+			'import start'   => array( 'menunest_import_start', 'menunest_import' ),
+			'import step'    => array( 'menunest_import_step', 'menunest_import' ),
+			'search'         => array( 'menunest_import_search', 'menunest_import' ),
+			'back up now'    => array( 'menunest_backup_create', 'menunest_editor' ),
+			'notice accept'  => array( 'menunest_save_consent', 'menunest_editor' ),
+			'notice dismiss' => array( 'menunest_dismiss_notice', 'menunest_editor' ),
 		);
 	}
 
@@ -342,5 +343,13 @@ class MenuNest_Ajax_Test extends WP_Ajax_UnitTestCase {
 	public function test_accepting_the_notice_is_remembered(): void {
 		$this->ajax( 'menunest_save_consent', array( 'nonce' => wp_create_nonce( 'menunest_editor' ) ) );
 		$this->assertNotEmpty( get_user_meta( self::$admin_id, MenuNest_Editor::CONSENT_META, true ) );
+	}
+
+	public function test_not_now_is_remembered_and_does_not_count_as_consent(): void {
+		$response = $this->ajax( 'menunest_dismiss_notice', array( 'nonce' => wp_create_nonce( 'menunest_editor' ) ) );
+
+		$this->assertTrue( $response['success'] );
+		$this->assertNotEmpty( get_user_meta( self::$admin_id, MenuNest_Editor::DISMISS_META, true ) );
+		$this->assertSame( '', get_user_meta( self::$admin_id, MenuNest_Editor::CONSENT_META, true ) );
 	}
 }

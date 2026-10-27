@@ -200,6 +200,7 @@ class MenuNest_History_Settings_Test extends MenuNest_TestCase {
 		MenuNest_Backups::create( $menu['menu_id'] );
 		update_option( MenuNest_Settings::OPTION, array( 'delete_on_remove' => 1 ) );
 		update_user_meta( self::$admin_id, MenuNest_Editor::CONSENT_META, time() );
+		update_user_meta( self::$admin_id, MenuNest_Editor::DISMISS_META, time() );
 
 		$this->run_uninstall();
 
@@ -207,6 +208,7 @@ class MenuNest_History_Settings_Test extends MenuNest_TestCase {
 		$this->assertSame( 0, MenuNest_History::query()['total'] );
 		$this->assertFalse( get_option( MenuNest_Settings::OPTION ) );
 		$this->assertSame( '', get_user_meta( self::$admin_id, MenuNest_Editor::CONSENT_META, true ) );
+		$this->assertSame( '', get_user_meta( self::$admin_id, MenuNest_Editor::DISMISS_META, true ) );
 		$this->assertCount( 6, $this->outline( $menu['menu_id'] ), 'Menus are untouched.' );
 	}
 

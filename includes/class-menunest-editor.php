@@ -16,6 +16,8 @@ final class MenuNest_Editor {
 
 	const CONSENT_META = 'menunest_backup_consent';
 
+	const DISMISS_META = 'menunest_backup_notice_dismissed';
+
 	/**
 	 * Register hooks.
 	 */
@@ -24,6 +26,7 @@ final class MenuNest_Editor {
 		add_action( 'load-nav-menus.php', array( __CLASS__, 'add_help_tab' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'notices' ) );
 		add_action( 'wp_ajax_menunest_save_consent', array( __CLASS__, 'ajax_save_consent' ) );
+		add_action( 'wp_ajax_menunest_dismiss_notice', array( __CLASS__, 'ajax_dismiss_notice' ) );
 		add_action( 'admin_post_menunest_duplicate', array( __CLASS__, 'handle_duplicate' ) );
 	}
 
@@ -49,6 +52,7 @@ final class MenuNest_Editor {
 				'postUrl'    => admin_url( 'admin-post.php' ),
 				'nonce'      => wp_create_nonce( 'menunest_editor' ),
 				'consent'    => (bool) get_user_meta( get_current_user_id(), self::CONSENT_META, true ),
+				'dismissed'  => (bool) get_user_meta( get_current_user_id(), self::DISMISS_META, true ),
 				'trees'      => self::term_trees(),
 				'taxLabels'  => self::taxonomy_labels(),
 				'menus'      => self::menus(),
@@ -128,6 +132,18 @@ final class MenuNest_Editor {
 			wp_send_json_error( null, 403 );
 		}
 		update_user_meta( get_current_user_id(), self::CONSENT_META, time() );
+		wp_send_json_success();
+	}
+
+	/**
+	 * Remember that this user chose "Not now", so the backup notice is not shown again.
+	 */
+	public static function ajax_dismiss_notice(): void {
+		check_ajax_referer( 'menunest_editor', 'nonce' );
+		if ( ! current_user_can( MenuNest_Plugin::CAPABILITY ) ) {
+			wp_send_json_error( null, 403 );
+		}
+		update_user_meta( get_current_user_id(), self::DISMISS_META, time() );
 		wp_send_json_success();
 	}
 

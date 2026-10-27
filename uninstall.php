@@ -34,3 +34,4 @@ foreach ( array( 'menunest_backup', 'menunest_log' ) as $menunest_post_type ) {
 
 delete_option( 'menunest_settings' );
 delete_metadata( 'user', 0, 'menunest_backup_consent', '', true );
+delete_metadata( 'user', 0, 'menunest_backup_notice_dismissed', '', true );

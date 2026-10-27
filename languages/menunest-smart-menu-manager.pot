@@ -848,7 +848,7 @@ msgid "You have unsaved changes. The copy will be made from the last SAVED versi
 msgstr ""
 
 #: assets/js/editor.js:46
-msgid "MenuNest is paused for this visit."
+msgid "MenuNest tools are off."
 msgstr ""
 
 #: assets/js/editor.js:47

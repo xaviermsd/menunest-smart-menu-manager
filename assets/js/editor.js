@@ -43,7 +43,7 @@
 		withChildren: __( 'Include subcategories (nested)', 'menunest-smart-menu-manager' ),
 		addFailed: __( 'Some items could not be added. Please reload the page and try again.', 'menunest-smart-menu-manager' ),
 		unsavedCopy: __( 'You have unsaved changes. The copy will be made from the last SAVED version of this menu, and leaving this page will discard your unsaved changes. Continue?', 'menunest-smart-menu-manager' ),
-		paused: __( 'MenuNest is paused for this visit.', 'menunest-smart-menu-manager' ),
+		paused: __( 'MenuNest tools are off.', 'menunest-smart-menu-manager' ),
 		enable: __( 'Turn on', 'menunest-smart-menu-manager' ),
 		backupReminder: __( 'Backup tips', 'menunest-smart-menu-manager' ),
 		modalTitle: __( 'Before you start: take a backup', 'menunest-smart-menu-manager' ),
@@ -223,6 +223,11 @@
 		$overlay.on( 'click', '.menunest-modal-notnow', function () {
 			close();
 			if ( ! infoOnly ) {
+				// Remember the choice, so the notice is not shown again on later visits.
+				if ( ! cfg.dismissed ) {
+					$.post( cfg.ajaxUrl, { action: 'menunest_dismiss_notice', nonce: cfg.nonce } );
+					cfg.dismissed = true;
+				}
 				showPausedBar();
 			}
 		} );
@@ -1229,6 +1234,8 @@
 
 		if ( cfg.consent ) {
 			start();
+		} else if ( cfg.dismissed ) {
+			showPausedBar(); // Chose "Not now" before: no popup, just a small "Turn on" bar.
 		} else {
 			showBackupModal( false );
 		}
