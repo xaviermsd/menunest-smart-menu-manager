@@ -11,8 +11,12 @@
 		@media (prefers-reduced-motion: reduce) { .p, .l, .c1, .c2 { animation: none; stroke-dashoffset: 0; } }
 	</style>
 	<title>MenuNest</title>
-	<rect class="p" x="3" y="4" width="20" height="6" rx="2" fill="#2271b1"/>
-	<path class="l" d="M8 10v6.5h5M8 16.5V24h5" fill="none" stroke="#2271b1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-	<rect class="c1" x="14" y="13.5" width="15" height="6" rx="2" fill="#72aee6"/>
-	<rect class="c2" x="14" y="21" width="15" height="6" rx="2" fill="#72aee6"/>
+	<rect width="32" height="32" rx="7" fill="#061019"/>
+	<rect x="0.4" y="0.4" width="31.2" height="31.2" rx="6.6" fill="none" stroke="#2de2e6" stroke-opacity="0.35" stroke-width="0.8"/>
+	<g transform="translate(3.2 3.6) scale(0.8)">
+		<rect class="p" x="3" y="4" width="20" height="6" rx="2" fill="#c6ff3d"/>
+		<path class="l" d="M8 10v6.5h5M8 16.5V24h5" fill="none" stroke="#c6ff3d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+		<rect class="c1" x="14" y="13.5" width="15" height="6" rx="2" fill="#2de2e6"/>
+		<rect class="c2" x="14" y="21" width="15" height="6" rx="2" fill="#2de2e6"/>
+	</g>
 </svg>

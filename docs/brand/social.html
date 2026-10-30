@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MenuNest social preview (1280x640)</title>
+<link rel="stylesheet" href="brand.css">
+<style>
+	.stage { width: 1280px; height: 640px; padding: 54px 64px 0; }
+	.brand { display: flex; align-items: center; gap: 20px; }
+	.word { font-size: 76px; }
+	.eyebrow { font-size: 15px; margin-top: 24px; }
+	.headline { font-size: 44px; margin-top: 10px; }
+	.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+	.card { border-radius: 16px; padding: 18px 20px; height: 138px; }
+	.card .chip { width: 38px; height: 38px; border-radius: 10px; font-size: 21px; }
+	.card .tag { top: 20px; right: 20px; font-size: 11px; }
+	.card h3 { font-size: 21px; margin-top: 16px; }
+	.card p { font-size: 15px; margin-top: 6px; }
+	.foot { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; font-size: 16px; }
+	.ticks { gap: 22px; }
+	.url { color: var(--cyan); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="stage">
+	<div class="brand">
+		<img class="mark" src="../../.wordpress-org/icon.svg" width="84" height="84" alt="">
+		<div class="word">Menu<span>Nest</span></div>
+	</div>
+	<div class="eyebrow">Smart menu manager for WordPress</div>
+	<div class="headline">Build menus faster. <em>Never lose one again.</em></div>
+	<div class="grid" id="grid"></div>
+	<div class="foot">
+		<div class="ticks">
+			<span><i class="ti ti-check"></i> Open source</span>
+			<span><i class="ti ti-check"></i> No dragging</span>
+			<span><i class="ti ti-check"></i> Auto backups</span>
+			<span><i class="ti ti-check"></i> No tracking</span>
+		</div>
+		<div class="url">Free on WordPress.org</div>
+	</div>
+</div>
+<script src="features.js"></script>
+</body>
+</html>
