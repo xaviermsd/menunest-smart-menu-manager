@@ -35,6 +35,19 @@ final class MenuNest_Importer {
 	}
 
 	/**
+	 * The temporary path of an uploaded file, exactly as PHP set it.
+	 *
+	 * PHP writes this path itself and never adds slashes to $_FILES, so it is not unslashed or
+	 * sanitized: that would strip the backslashes of a Windows path (C:\xampp\tmp\php1A2B.tmp)
+	 * and is_uploaded_file() would then reject the upload. is_uploaded_file() is the check.
+	 *
+	 * @param array<string, mixed> $file One entry of $_FILES.
+	 */
+	public static function uploaded_path( array $file ): string {
+		return isset( $file['tmp_name'] ) && is_string( $file['tmp_name'] ) ? $file['tmp_name'] : '';
+	}
+
+	/**
 	 * Step 1: read the uploaded or pasted file, check it and open the preview.
 	 */
 	public static function handle_preview(): void {
@@ -45,7 +58,7 @@ final class MenuNest_Importer {
 
 		$raw = '';
 		if ( ! empty( $_FILES['import_file']['tmp_name'] ) && isset( $_FILES['import_file']['error'], $_FILES['import_file']['size'] ) ) {
-			$tmp = sanitize_text_field( wp_unslash( $_FILES['import_file']['tmp_name'] ) );
+			$tmp = self::uploaded_path( $_FILES['import_file'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- PHP sets tmp_name itself; is_uploaded_file() below is the check.
 			if ( UPLOAD_ERR_OK !== (int) $_FILES['import_file']['error'] || ! is_uploaded_file( $tmp ) ) {
 				self::fail( __( 'The file could not be uploaded. Please try again.', 'menunest-smart-menu-manager' ) );
 			}

@@ -48,6 +48,15 @@ class MenuNest_Importer_Test extends MenuNest_TestCase {
 		);
 	}
 
+	public function test_uploaded_path_keeps_windows_backslashes(): void {
+		$path = 'C:\\xampp\\tmp\\php1A2B.tmp';
+
+		$this->assertSame( $path, MenuNest_Importer::uploaded_path( array( 'tmp_name' => $path ) ) );
+		$this->assertSame( '/tmp/phpAbC123', MenuNest_Importer::uploaded_path( array( 'tmp_name' => '/tmp/phpAbC123' ) ) );
+		$this->assertSame( '', MenuNest_Importer::uploaded_path( array( 'tmp_name' => array( 'a', 'b' ) ) ) );
+		$this->assertSame( '', MenuNest_Importer::uploaded_path( array() ) );
+	}
+
 	public function test_valid_export_round_trips(): void {
 		$data = MenuNest_Importer::validate( $this->export_json() );
 
