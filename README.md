@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=SljKJXaSWe8"><img src="https://img.youtube.com/vi/SljKJXaSWe8/maxresdefault.jpg" alt="Watch the MenuNest tutorial on YouTube (3:50)" width="720"></a><br>
+  <a href="https://www.youtube.com/watch?v=SljKJXaSWe8"><img src="docs/tutorial-video.jpg" alt="Play the MenuNest tutorial on YouTube (3:50)" width="720"></a><br>
   <a href="https://www.youtube.com/watch?v=SljKJXaSWe8"><b>Watch the full tutorial on YouTube (3:50)</b></a>
 </p>
 
