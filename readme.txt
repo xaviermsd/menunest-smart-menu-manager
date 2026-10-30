@@ -14,6 +14,8 @@ Add menu items under any parent without dragging, bulk add from a pasted list, a
 
 The classic menu editor (Appearance > Menus) always adds new items at the very bottom. On a big menu you then drag every item up, and to the right, under its parent. MenuNest removes that hassle and keeps your menus safe while you work.
 
+https://www.youtube.com/watch?v=SljKJXaSWe8
+
 = Build menus faster =
 
 * **Add new items under a parent.** Pick the parent once. Every "Add to Menu" button (custom links, pages, posts, categories, product categories) puts new items straight under it.

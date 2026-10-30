@@ -18,6 +18,11 @@
 </p>
 
 <p align="center">
+  <a href="https://www.youtube.com/watch?v=SljKJXaSWe8"><img src="https://img.youtube.com/vi/SljKJXaSWe8/maxresdefault.jpg" alt="Watch the MenuNest tutorial on YouTube (3:50)" width="720"></a><br>
+  <a href="https://www.youtube.com/watch?v=SljKJXaSWe8"><b>Watch the full tutorial on YouTube (3:50)</b></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/xaviermsd/menunest-smart-menu-manager/actions/workflows/ci.yml"><img src="https://github.com/xaviermsd/menunest-smart-menu-manager/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/WordPress-6.7%2B-c6ff3d?labelColor=061019" alt="WordPress 6.7+">
   <img src="https://img.shields.io/badge/PHP-7.4%2B-c6ff3d?labelColor=061019" alt="PHP 7.4+">
