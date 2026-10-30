@@ -191,3 +191,26 @@
 	margin-bottom: 8px;
 	color: #2271b1;
 }
+
+/* Delete and clear: a native button in the WordPress error red, filled on hover. */
+.wp-core-ui .button.menunest-button-danger {
+	color: #b32d2e;
+	border-color: #b32d2e;
+	background: #fff;
+}
+
+.wp-core-ui .button.menunest-button-danger:hover {
+	color: #fff;
+	border-color: #8a2424;
+	background: #b32d2e;
+}
+
+.wp-core-ui .button.menunest-button-danger:focus {
+	color: #b32d2e;
+	border-color: #b32d2e;
+	box-shadow: 0 0 0 1px #b32d2e;
+}
+
+.wp-core-ui .button.menunest-button-danger:hover:focus {
+	color: #fff;
+}

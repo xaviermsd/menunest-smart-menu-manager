@@ -155,6 +155,23 @@ class MenuNest_Backups_Test extends MenuNest_TestCase {
 		$this->assertNull( MenuNest_Backups::get_data( $post ) );
 	}
 
+	public function test_delete_and_clear_are_danger_buttons(): void {
+		$menu = $this->make_menu();
+		MenuNest_Backups::create( $menu['menu_id'] );
+
+		$_GET = array( 'tab' => 'backups' );
+		ob_start();
+		MenuNest_Admin::render();
+		$html = (string) ob_get_clean();
+		$this->assertMatchesRegularExpression( '/class="button button-small menunest-button-danger"[^>]*menunest_backup_delete/', $html );
+
+		$_GET = array( 'tab' => 'history' );
+		ob_start();
+		MenuNest_Admin::render();
+		$html = (string) ob_get_clean();
+		$this->assertMatchesRegularExpression( '/class="button menunest-button-danger"[^>]*menunest_history_clear/', $html );
+	}
+
 	public function test_history_records_manual_backups_and_restores_only(): void {
 		$menu = $this->make_menu();
 		MenuNest_Backups::create( $menu['menu_id'], 'before_save' );

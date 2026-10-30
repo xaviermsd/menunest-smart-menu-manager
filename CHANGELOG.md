@@ -4,6 +4,16 @@ All notable changes to MenuNest: Smart Menu Manager are listed here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the
 project uses [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Delete (on a backup) and Clear history are now red danger buttons, matching the other actions.
+
+### Fixed
+
+- Importing an uploaded export file failed on Windows servers with "The file could not be uploaded".
+
 ## [1.0.0] - 2026-10-23
 
 ### Added

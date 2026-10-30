@@ -324,7 +324,7 @@ final class MenuNest_Admin {
 							?>
 																	"><?php esc_html_e( 'Restore as new menu', 'menunest-smart-menu-manager' ); ?></a>
 							<a class="button button-small" href="<?php echo esc_url( self::action_url( 'menunest_backup_download', array( 'backup' => $backup->ID ) ) ); ?>"><?php esc_html_e( 'Download JSON', 'menunest-smart-menu-manager' ); ?></a>
-							<a class="button-link button-link-delete" href="<?php echo esc_url( self::action_url( 'menunest_backup_delete', array( 'backup' => $backup->ID ) ) ); ?>"
+							<a class="button button-small menunest-button-danger" href="<?php echo esc_url( self::action_url( 'menunest_backup_delete', array( 'backup' => $backup->ID ) ) ); ?>"
 								data-menunest-confirm="<?php esc_attr_e( 'Delete this backup permanently?', 'menunest-smart-menu-manager' ); ?>">
 								<?php esc_html_e( 'Delete', 'menunest-smart-menu-manager' ); ?>
 							</a>
@@ -556,7 +556,7 @@ final class MenuNest_Admin {
 				<a class="button" href="<?php echo esc_url( self::action_url( 'menunest_history_download', array( 'format' => 'json' ) ) ); ?>"><?php esc_html_e( 'Download JSON', 'menunest-smart-menu-manager' ); ?></a>
 				<a class="button" href="<?php echo esc_url( self::action_url( 'menunest_history_download', array( 'format' => 'txt' ) ) ); ?>"><?php esc_html_e( 'Download text', 'menunest-smart-menu-manager' ); ?></a>
 				<?php if ( $result['total'] ) : ?>
-					<a class="button button-link-delete" href="<?php echo esc_url( self::action_url( 'menunest_history_clear' ) ); ?>"
+					<a class="button menunest-button-danger" href="<?php echo esc_url( self::action_url( 'menunest_history_clear' ) ); ?>"
 						data-menunest-confirm="<?php esc_attr_e( 'Clear the whole history? This cannot be undone. Download a copy first if you need it.', 'menunest-smart-menu-manager' ); ?>">
 						<?php esc_html_e( 'Clear history', 'menunest-smart-menu-manager' ); ?>
 					</a>
