@@ -38,6 +38,20 @@
 	border-radius: 4px;
 	max-width: 820px;
 	box-sizing: border-box;
+	/* Stays in view while search jumps between matches on a long menu. */
+	position: sticky;
+	top: 32px;
+	z-index: 20;
+}
+@media screen and (max-width: 782px) {
+	.menunest-toolbar {
+		top: 46px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.menunest-toolbar {
+		top: 0; /* The admin bar scrolls away here. */
+	}
 }
 .menunest-search {
 	position: relative;
