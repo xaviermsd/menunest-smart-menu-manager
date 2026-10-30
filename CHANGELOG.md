@@ -9,6 +9,7 @@ project uses [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - Delete (on a backup) and Clear history are now red danger buttons, matching the other actions.
+- The backup notice, search highlights and import warnings use the MenuNest lime and cyan instead of amber.
 
 ### Fixed
 

@@ -92,8 +92,8 @@
 }
 
 .menunest-badge.is-warn {
-	background: #fcf0d0;
-	color: #5c3c00;
+	background: #d0fbfc;
+	color: #005a5c;
 }
 
 .menunest-summary {
@@ -136,7 +136,11 @@
 }
 
 .menunest-status-converted td {
-	background: #fffbf0;
+	background: #f0ffff;
+}
+
+.menunest-warnings.notice-warning {
+	border-left-color: #2de2e6;
 }
 
 .menunest-override select,
