@@ -1,10 +1,10 @@
-<p align="center">
-  <img src=".wordpress-org/banner-1544x500.jpg" alt="MenuNest: Smart Menu Manager. Build menus faster. Never lose one again." width="100%">
-</p>
-
 <h1 align="center">
   <img src="docs/menunest-logo-animated.svg" alt="" width="56" align="center"> MenuNest: Smart Menu Manager
 </h1>
+
+<p align="center">
+  <img src=".wordpress-org/banner-1544x500.jpg" alt="MenuNest: Smart Menu Manager. Build menus faster. Never lose one again." width="100%">
+</p>
 
 <p align="center">
   <b>Build WordPress menus without the drag-and-drop hassle, and never lose one again.</b><br>
@@ -48,15 +48,13 @@
 
 Click a task to jump straight to how it works.
 
-| I want to... | MenuNest gives you | |
-| --- | --- | --- |
-| Add pages under *Shop* without dragging each one | **Add new items under** a parent you pick once | [Show me](#add-items-under-a-parent) |
-| Turn a list from a doc or spreadsheet into a menu | **Bulk add**: paste, indent to nest, done | [Show me](#paste-a-whole-list) |
-| Add one sub-item without scrolling back to the left panel | A **+** button on every menu item | [Show me](#add-a-sub-item-in-place) |
-| Find one item in a menu with 200 entries | **Search**, highlight, jump, collapse branches | [Show me](#find-your-way-around-big-menus) |
-| Undo a menu change that broke the site | **Automatic backups** and one-click restore | [Show me](#never-lose-a-menu) |
-| Copy a menu from staging to live | **Export and import** with a full preview | [Show me](#move-menus-between-sites) |
-| See who changed which menu, and when | A **history log** you can download | [Show me](#know-what-happened) |
+- **Add pages under *Shop* without dragging each one**<br>**Add new items under** a parent you pick once · [Show me](#add-items-under-a-parent)
+- **Turn a list from a doc or spreadsheet into a menu**<br>**Bulk add**: paste, indent to nest, done · [Show me](#paste-a-whole-list)
+- **Add one sub-item without scrolling back to the left panel**<br>A **+** button on every menu item · [Show me](#add-a-sub-item-in-place)
+- **Find one item in a menu with 200 entries**<br>**Search**, highlight, jump, collapse branches · [Show me](#find-your-way-around-big-menus)
+- **Undo a menu change that broke the site**<br>**Automatic backups** and one-click restore · [Show me](#never-lose-a-menu)
+- **Copy a menu from staging to live**<br>**Export and import** with a full preview · [Show me](#move-menus-between-sites)
+- **See who changed which menu, and when**<br>A **history log** you can download · [Show me](#know-what-happened)
 
 > [!TIP]
 > Nothing MenuNest does in the menu editor goes live until you click **Save Menu**, exactly like WordPress
@@ -216,12 +214,10 @@ theme and plugins.
 <summary><b>How items are matched on the new site</b></summary>
 <br>
 
-| In the file | On the new site | Result in the preview |
-| --- | --- | --- |
-| A page, post or category that exists here | Same slug or path found | **Matched**, linked to the local content |
-| A custom link to the old site's address | Address rewritten to this site | **Custom link, address updated** |
-| Any other custom link | Kept as it is | **Custom link** |
-| Content that doesn't exist here | Nothing to link to | **Becomes a custom link**, never dropped |
+- **A page, post or category that exists here**<br>On the new site: Same slug or path found<br>Result in the preview: **Matched**, linked to the local content
+- **A custom link to the old site's address**<br>On the new site: Address rewritten to this site<br>Result in the preview: **Custom link, address updated**
+- **Any other custom link**<br>On the new site: Kept as it is<br>Result in the preview: **Custom link**
+- **Content that doesn't exist here**<br>On the new site: Nothing to link to<br>Result in the preview: **Becomes a custom link**, never dropped
 
 </details>
 
@@ -242,28 +238,19 @@ date, the user and what happened. Download it as JSON or plain text, or clear it
 
 ## Install in a minute
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 **From WordPress.org**
 
 1. In WordPress, go to **Plugins > Add New**.
 2. Search for **MenuNest**.
 3. Click **Install Now**, then **Activate**.
 
-</td>
-<td width="50%" valign="top">
+
 
 **From GitHub**
 
 1. Download `menunest-smart-menu-manager.zip` from the [latest release](https://github.com/xaviermsd/menunest-smart-menu-manager/releases/latest).
 2. Go to **Plugins > Add New > Upload Plugin** and choose the zip.
 3. Click **Install Now**, then **Activate**.
-
-</td>
-</tr>
-</table>
 
 Then open **Appearance > Menus**. The first time, MenuNest asks you to take a backup: click
 **Back up this menu now**, tick the box and click **Continue**.
@@ -275,12 +262,10 @@ Then open **Appearance > Menus**. The first time, MenuNest asks you to take a ba
 
 **Appearance > MenuNest > Settings**
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| Backups to keep (per menu) | 10 | 1 to 100. The oldest backups are removed first. |
-| Automatic backups | On | Back up a menu every time it is saved. |
-| History: entries to keep | 500 | 50 to 5,000. |
-| Remove data (when the plugin is deleted) | Off | When on, backups, history and settings are deleted with the plugin. Menus are never touched. |
+- **Backups to keep (per menu)** (default: 10)<br>1 to 100. The oldest backups are removed first.
+- **Automatic backups** (default: On)<br>Back up a menu every time it is saved.
+- **History: entries to keep** (default: 500)<br>50 to 5,000.
+- **Remove data (when the plugin is deleted)** (default: Off)<br>When on, backups, history and settings are deleted with the plugin. Menus are never touched.
 
 ## FAQ
 
@@ -375,14 +360,12 @@ All settings are in `tests/wp-tests-config.php` and can be set with environment 
 <summary><b>Quality gates (every push and pull request)</b></summary>
 <br>
 
-| Check | What it covers |
-| --- | --- |
-| PHPUnit | Backups and restore, import validation, matching and safe setting keys, batched import, history, settings, uninstall, permissions and security tokens |
-| Test matrix | PHP 7.4, 8.1, 8.3, 8.4 on WordPress 6.7 and the latest release |
-| PHPStan | Level 8, with WordPress-aware rules, on every PHP file |
-| WordPress Coding Standards | `WordPress` ruleset, zero errors and warnings |
-| PHP compatibility | PHP 7.4 and newer |
-| Plugin Check | The official WordPress.org check, on the release build: no errors or warnings |
+- **PHPUnit**<br>Backups and restore, import validation, matching and safe setting keys, batched import, history, settings, uninstall, permissions and security tokens
+- **Test matrix**<br>PHP 7.4, 8.1, 8.3, 8.4 on WordPress 6.7 and the latest release
+- **PHPStan**<br>Level 8, with WordPress-aware rules, on every PHP file
+- **WordPress Coding Standards**<br>`WordPress` ruleset, zero errors and warnings
+- **PHP compatibility**<br>PHP 7.4 and newer
+- **Plugin Check**<br>The official WordPress.org check, on the release build: no errors or warnings
 
 All PHP files use `declare( strict_types=1 )` and native type declarations.
 
