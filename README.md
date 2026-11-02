@@ -416,5 +416,5 @@ GPL-2.0-or-later. See [LICENSE](LICENSE).
 
 <p align="center">
   <img src="docs/menunest-logo-animated.svg" alt="" width="32"><br>
-  <sub>Made by <a href="https://profiles.wordpress.org/xaviermsd/">Harsh Prajapati</a>. Also by the same author: <a href="https://wordpress.org/plugins/fieldpilot-for-acf/">FieldPilot, AI and JSON copilot for ACF</a>.</sub>
+  <sub>Made by <a href="https://github.com/xaviermsd">Harsh Prajapati</a>. Also by the same author: <a href="https://wordpress.org/plugins/fieldpilot-for-acf/">FieldPilot, AI and JSON copilot for ACF</a>.</sub>
 </p>
